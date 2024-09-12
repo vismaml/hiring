@@ -41,6 +41,7 @@ Create you own micro-service to do the image processing, seperate from the API s
     * The image originally sent to the API
     * Parameters for scaling the image or not
     * Parameters for grayscaling the image or not
+    * The service needs to be able to handle JPEGs and PNGs
 
 Apart from that you will need to change [the API endpoint](./pkg/api/api.go) so that it calls and passes the image to your service. The API should satisfy the following:
 
@@ -59,3 +60,4 @@ Deploy your new service onto Minikube. The API should be able to call your servi
 #### Questions
 - How would you horizontally scale your service? 
 - If we wanted to store the images for further processing - how and where would you store them?
+- What would you change to support rasterization of PDFs?
